@@ -1,0 +1,43 @@
+.tag {
+  background-color: $secondary-color;
+  min-width: 84px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 5px;
+
+  @include breakpoint(md) {
+    min-width: 100px;
+    height: 22px;
+    padding: 0 8px;
+  }
+
+  @include breakpoint(lg) {
+    min-width: 115px;
+    height: 25px;
+    padding: 0 10px;
+  }
+
+  > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    > div {
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: $primary-color;
+
+      @include breakpoint(md) {
+        font-size: 12px;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+}

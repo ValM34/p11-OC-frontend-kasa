@@ -1,0 +1,33 @@
+.thumbnail {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    height: 255px;
+    width: 100%;
+
+    @include breakpoint(md) {
+      height: 340px;
+    }
+  }
+
+  p {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(transparent 60%, $secondary-color);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

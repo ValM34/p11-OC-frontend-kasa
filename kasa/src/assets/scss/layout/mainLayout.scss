@@ -1,0 +1,11 @@
+.main-layout-content-container {
+  padding: 0 20px;
+
+  @include breakpoint(md) {
+    padding: 0 40px;
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 100px;
+  }
+}

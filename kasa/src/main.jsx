@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 // import App from './App.jsx'
 import Root from './routes/root'
-import ErrorPage from "./error-page";
+import ErrorPage from "./routes/error-page";
 import About from "./routes/about";
 import HousingCard from "./routes/housing-card";
 import './assets/scss/main.scss'
@@ -29,8 +29,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <header>header</header>
-      <RouterProvider router={router} />
-    <footer>footer</footer>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -1,0 +1,57 @@
+.collapse {
+  width: 100%;
+  
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: $secondary-color;
+    height: 30px;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 700;
+
+    @include breakpoint(lg) {
+      height: 52px;
+      font-size: 18px;
+    }
+
+    .title {
+      color: $primary-color;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .chevron {
+      transition: transform 0.2s ease-in-out;
+      transform: rotate(180deg);
+
+      &.open {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .content-container {
+    //display: none;
+    background-color: $gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    max-height: 0;
+
+    &.open {
+      max-height: 500px;
+    }
+
+    .content {
+      font-size: 12px;
+      padding: 20px;
+  
+      @include breakpoint(lg) {
+        font-size: 18px;
+      }
+    }
+  }
+}

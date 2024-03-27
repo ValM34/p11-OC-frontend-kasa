@@ -1,0 +1,70 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+
+  @include breakpoint(md) {
+    padding: 40px 40px 0 40px;
+  }
+
+  @include breakpoint(lg) {
+    padding: 40px 100px 0 100px;
+  }
+
+  img {
+    width: 145px;
+    max-width: 45%;
+
+    @include breakpoint(md) {
+      width: 180px;
+    }
+
+    @include breakpoint(lg) {
+      width: 210px;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+  
+      li {
+        margin-right: 20px;
+
+        @include breakpoint(md) {
+          margin-right: 40px;
+        }
+
+        @include breakpoint(lg) {
+          margin-right: 60px;
+        }
+  
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $tertiary-color;
+          font-weight: 600;
+          font-size: 12px;
+          text-decoration: none;
+
+          @include breakpoint(md) {
+            font-size: 16px;
+          }
+
+          @include breakpoint(lg) {
+            font-size: 24px;
+          }
+
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

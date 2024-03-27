@@ -1,2 +1,12 @@
 @import "./base/reset.scss";
 @import "./base/mediaQueries.scss";
+@import "./base/fonts.scss";
+@import "./utils/variables.scss";
+@import "./layout/mainLayout.scss";
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+@import "./components/tag.scss";
+@import "./components/collapse.scss";
+@import "./components/slider.scss";
+@import "./components/thumbnail.scss";
+@import './pages/root.scss';
