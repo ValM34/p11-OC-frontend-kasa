@@ -9,9 +9,9 @@ export default function Collapse({children, title}) {
 
   return(
     <div className="collapse">
-      <div className="title-container" onClick={handleClick}>
+      <div className="title-container">
         <div className="title">{title}</div>
-        <div className={`chevron ${open ? 'open' : ''}`}>
+        <div className={`chevron ${open ? 'open' : ''}`} onClick={handleClick}>
           <img src={chevron} alt="chevron" />
         </div>
       </div>

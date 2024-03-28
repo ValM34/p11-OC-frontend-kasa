@@ -14,17 +14,30 @@
     @include breakpoint(lg) {
       height: 52px;
       font-size: 18px;
+      border-radius: 10px;
+      padding-right: 20px;
     }
 
     .title {
       color: $primary-color;
       font-weight: 700;
       font-size: 13px;
+
+      @include breakpoint(lg) {
+        font-size: 18px;
+      }
     }
 
     .chevron {
       transition: transform 0.2s ease-in-out;
       transform: rotate(180deg);
+      cursor: pointer;
+
+      img {
+        @include breakpoint(lg) {
+          width: 24px;
+        }
+      }
 
       &.open {
         transform: rotate(0deg);
@@ -33,7 +46,6 @@
   }
 
   .content-container {
-    //display: none;
     background-color: $gray;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

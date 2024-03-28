@@ -1,0 +1,63 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(lg) {
+    height: calc(100vh - 107px);
+    justify-content: space-evenly;
+  }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 96px;
+    color: $secondary-color;
+    margin-bottom: 113px;
+    margin-top: 93px;
+
+    @include breakpoint(md) {
+      font-size: 150px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 288px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 113px;
+
+    
+    @include breakpoint(md) {
+      font-size: 27px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 14px;
+    color: $tertiary-color;
+    margin-bottom: 113px;
+
+    
+    @include breakpoint(md) {
+      font-size: 16px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+}
