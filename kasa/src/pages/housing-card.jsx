@@ -3,17 +3,12 @@ import Collapse from '../components/Collapse'
 import Slider from '../components/Slider'
 import MainLayout from '../layouts/MainLayout'
 import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 import colorfulStar from '../assets/images/star-colorful.svg'
 import grayStar from '../assets/images/star-gray.svg'
-import { useNavigate } from "react-router-dom"
 
 export default function HousingCard() {
-  const location = useLocation();
-  const accommodationId = location.pathname.split('/')[2];
-  const navigate = useNavigate();
-
   const [data, setData] = useState(null);
+  
   const getData = () => {
     fetch('../logements.json', {
       method: 'GET',
@@ -24,9 +19,10 @@ export default function HousingCard() {
     })
       .then((response) => response.json())
       .then((data) => {
+        const accommodationId = window.location.href.split('/')[4];
         const actualAccommodationIndex = data.findIndex((element) => element.id === accommodationId);
         if(actualAccommodationIndex === -1) {
-          navigate("/erreur404");
+          window.location.href = "/erreur404";
         }
         const actualAccommodation = data[actualAccommodationIndex];
         setData(actualAccommodation);

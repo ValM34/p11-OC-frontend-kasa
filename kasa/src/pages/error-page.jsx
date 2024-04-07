@@ -1,5 +1,4 @@
 import MainLayout from '../layouts/MainLayout';
-import { Navigate } from "react-router-dom";
 
 export default function ErrorPage() {
   return (

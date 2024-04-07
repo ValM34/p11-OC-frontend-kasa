@@ -1,6 +1,6 @@
-import { useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-export default function Thumbnail({accomodation}) {
+function Thumbnail({accomodation}) {
   return(
     <a href={`/fiche-logement/${accomodation.id}`} className="thumbnail">
       <img src={accomodation.cover} alt="image du logement" />
@@ -8,3 +8,9 @@ export default function Thumbnail({accomodation}) {
     </a>
   )
 }
+
+Thumbnail.propTypes = {
+  accomodation: PropTypes.object
+}
+
+export default Thumbnail;

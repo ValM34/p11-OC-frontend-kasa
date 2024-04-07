@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import chevronSliderWhite from '../assets/images/chevron-slider-white.svg'
+import PropTypes from 'prop-types'
 
-export default function Slider({actualAccommodation}) {
+function Slider({actualAccommodation}) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const next = () => {
@@ -37,3 +38,9 @@ export default function Slider({actualAccommodation}) {
     </div>
   )
 }
+
+Slider.propTypes = {
+  actualAccommodation: PropTypes.object
+}
+
+export default Slider;

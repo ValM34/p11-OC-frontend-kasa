@@ -1,4 +1,6 @@
-export default function Tag({children}) {
+import PropTypes from 'prop-types'
+
+function Tag({children}) {
   return(
     <div className="tag">
       <div>
@@ -9,3 +11,9 @@ export default function Tag({children}) {
     </div>
   )
 }
+
+Tag.propTypes = {
+  children: PropTypes.string
+}
+
+export default Tag;

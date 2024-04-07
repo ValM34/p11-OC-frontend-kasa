@@ -1,7 +1,8 @@
 import Header from './Header'
 import Footer from './Footer'
+import PropTypes from 'prop-types'
 
-export default function MainLayout({children}) {
+function MainLayout({children}) {
   return(
     <>
       <Header />
@@ -12,3 +13,9 @@ export default function MainLayout({children}) {
     </>
   )
 }
+
+MainLayout.propTypes = {
+  children: PropTypes.node
+}
+
+export default MainLayout;

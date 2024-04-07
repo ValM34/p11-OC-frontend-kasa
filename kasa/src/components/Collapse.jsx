@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types'
+
 import { useState } from 'react'
 import chevron from '../assets/images/chevron-white.svg'
 
-export default function Collapse({children, title}) {
+function Collapse({children, title}) {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -23,3 +25,10 @@ export default function Collapse({children, title}) {
     </div>
   )
 }
+
+Collapse.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string
+}
+
+export default Collapse;
